@@ -1,7 +1,7 @@
 'use strict'
 
 var React  = require('react')
-
+require('moment/locale/ru');
 var moment   = require('moment')
 var asConfig = require('./utils/asConfig')
 var assign   = require('object-assign')
@@ -233,7 +233,7 @@ var DatePicker = React.createClass({
         var prev    = this.props.navPrev
         var next    = this.props.navNext
 
-        return <Header 
+        return <Header
                 prevText={prev}
                 nextText={next}
                 colspan={colspan}
@@ -255,12 +255,12 @@ var DatePicker = React.createClass({
 
     /**
      * Use this method to set the view.
-     * 
+     *
      * @param {String} view 'month'/'year'/'decade'
      *
      * It calls onViewChange, and if the view is uncontrolled, also sets it is state,
      * so the datepicker gets re-rendered view the new view
-     * 
+     *
      */
     setView: function(view) {
 
