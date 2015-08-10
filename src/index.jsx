@@ -202,6 +202,7 @@ var DatePicker = React.createClass({
 
     gotoNow: function() {
         this.gotoDate(+new Date())
+        this.handleChange(new Date());
     },
 
     gotoSelected: function() {
